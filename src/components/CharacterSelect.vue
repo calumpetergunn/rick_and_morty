@@ -1,14 +1,13 @@
 <template>
-  <section>
-      <p>{{character.name}}</p>
-  </section>
+    <option >{{character.name}}</option>
 </template>
 
 <script>
 
 export default {
     name: 'character-select',
-    props: ['character']
+    props: ['character'],
+    
 }
 </script>
 

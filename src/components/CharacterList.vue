@@ -1,8 +1,9 @@
 <template>
   <section>
-      <ul>
+      <select @change="handleSelect($event)">
+          <option selected disabled value="">Select a character:</option>
           <character-select v-for="(character, index) in characters" :character="character" :key="index"/>
-      </ul>
+      </select>
   </section>
 </template>
 
@@ -14,6 +15,12 @@ export default {
     props: ['characters'],
     components : {
         "character-select": CharacterSelect
+    },
+    methods: {
+        handleSelect: function(event) {
+            console.log(event.target.value)
+            
+        }
     }
 }
 </script>

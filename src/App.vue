@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <p>Hi there!</p>
+    
     <character-list :characters="characters"/>
   </div>
 </template>
