@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import {eventBus} from '../main.js'
+
 import CharacterSelect from './CharacterSelect.vue';
 
 export default {
@@ -19,7 +21,12 @@ export default {
     methods: {
         handleSelect: function(event) {
             console.log(event.target.value)
-            
+            const selectedName = event.target.value;
+            eventBus.$emit('character-selected', this.characters.find(character => character.name === selectedName))
+            console.log(this.characters.find(character => character.name === selectedName))
+
+
+
         }
     }
 }

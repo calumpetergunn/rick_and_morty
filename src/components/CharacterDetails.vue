@@ -1,11 +1,15 @@
 <template>
-    <h3>Character Details should go here</h3>
+    <section>
+        <h3>{{character.name}}</h3>
+        <p>Status: {{character.status}}</p>
+        <p>Origin: {{character.origin.name}}</p>
+    </section>
 </template>
 
 <script>
 export default {
-    name: 'character-detail',
-props: ['character']
+    name: 'character-details',
+    props: ['character']
 
 }
 </script>
